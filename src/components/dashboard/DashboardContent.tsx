@@ -15,6 +15,13 @@ import { CellCard } from '@/components/dashboard/CellCard';
 import { FederationCard } from '@/components/dashboard/FederationCard';
 import { LayerVisualization } from '@/components/dashboard/LayerVisualization';
 import { GlassCard } from '@/components/ui/GlassCard';
+import { IsabellaSection } from '@/components/dashboard/IsabellaSection';
+import { DreamSpacesSection } from '@/components/dashboard/DreamSpacesSection';
+import { TruequeSection } from '@/components/dashboard/TruequeSection';
+import { KaosAudioSection } from '@/components/dashboard/KaosAudioSection';
+import { DevHubSection } from '@/components/dashboard/DevHubSection';
+import { BookPISection } from '@/components/dashboard/BookPISection';
+import { MembershipsSection } from '@/components/dashboard/MembershipsSection';
 import { knowledgeCells, systemModules, federationDomains, dashboardStats } from '@/data/mockData';
 
 interface DashboardContentProps {
@@ -24,18 +31,19 @@ interface DashboardContentProps {
 export function DashboardContent({ activeSection }: DashboardContentProps) {
   const renderContent = () => {
     switch (activeSection) {
-      case 'dashboard':
-        return <DashboardOverview />;
-      case 'cells':
-        return <CellsSection />;
-      case 'layers':
-        return <LayersSection />;
-      case 'federation':
-        return <FederationSection />;
-      case 'modules':
-        return <ModulesSection />;
-      default:
-        return <ComingSoonSection title={activeSection} />;
+      case 'dashboard': return <DashboardOverview />;
+      case 'cells': return <CellsSection />;
+      case 'layers': return <LayersSection />;
+      case 'federation': return <FederationSection />;
+      case 'modules': return <ModulesSection />;
+      case 'isabella': return <IsabellaSection />;
+      case 'dreamspaces': return <DreamSpacesSection />;
+      case 'kaos': return <KaosAudioSection />;
+      case 'trueque': return <TruequeSection />;
+      case 'bookpi': return <BookPISection />;
+      case 'memberships': return <MembershipsSection />;
+      case 'devhub': return <DevHubSection />;
+      default: return <ComingSoonSection title={activeSection} />;
     }
   };
 
