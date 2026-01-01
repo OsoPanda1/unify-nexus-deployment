@@ -22,6 +22,11 @@ import { KaosAudioSection } from '@/components/dashboard/KaosAudioSection';
 import { DevHubSection } from '@/components/dashboard/DevHubSection';
 import { BookPISection } from '@/components/dashboard/BookPISection';
 import { MembershipsSection } from '@/components/dashboard/MembershipsSection';
+import { MediaFeed } from '@/components/dashboard/MediaFeed';
+import { ChannelsSection } from '@/components/dashboard/ChannelsSection';
+import { GroupsSection } from '@/components/dashboard/GroupsSection';
+import { MetricsCharts } from '@/components/dashboard/MetricsCharts';
+import { GallerySection } from '@/components/dashboard/GallerySection';
 import { knowledgeCells, systemModules, federationDomains, dashboardStats } from '@/data/mockData';
 
 interface DashboardContentProps {
@@ -43,6 +48,11 @@ export function DashboardContent({ activeSection }: DashboardContentProps) {
       case 'bookpi': return <BookPISection />;
       case 'memberships': return <MembershipsSection />;
       case 'devhub': return <DevHubSection />;
+      case 'media': return <MediaFeed />;
+      case 'channels': return <ChannelsSection />;
+      case 'groups': return <GroupsSection />;
+      case 'metrics': return <MetricsCharts />;
+      case 'gallery': return <GallerySection />;
       default: return <ComingSoonSection title={activeSection} />;
     }
   };
