@@ -16,7 +16,15 @@ import {
   ShoppingBag,
   FileCheck,
   Crown,
-  Code
+  Code,
+  Newspaper,
+  MessageCircle,
+  Radio,
+  Users,
+  Music,
+  Ticket,
+  GraduationCap,
+  Link2
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -29,24 +37,34 @@ interface SidebarProps {
 }
 
 const navItems = [
+  // Primer plano - Social
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { id: 'cells', label: 'KnowledgeCells', icon: Boxes },
-  { id: 'layers', label: 'Capas (L0-L4)', icon: Layers },
-  { id: 'federation', label: 'Triple Federado', icon: Globe },
-  { id: 'modules', label: 'Módulos', icon: Cpu },
+  { id: 'feed', label: 'Muro Social', icon: Newspaper },
+  { id: 'messages', label: 'Mensajes', icon: MessageCircle },
+  { id: 'channels', label: 'Canales', icon: Radio },
+  { id: 'groups', label: 'Grupos', icon: Users },
   { id: 'divider1', label: '', icon: null },
-  { id: 'isabella', label: 'Isabella IA', icon: Brain },
+  // Experiencias
   { id: 'dreamspaces', label: 'DreamSpaces', icon: Sparkles },
+  { id: 'concerts', label: 'Conciertos', icon: Music },
   { id: 'kaos', label: 'KAOS Audio', icon: Volume2 },
   { id: 'trueque', label: 'Trueque', icon: ShoppingBag },
+  { id: 'lottery', label: 'Lotería', icon: Ticket },
+  { id: 'university', label: 'UTAMV', icon: GraduationCap },
+  { id: 'divider2', label: '', icon: null },
+  // Sistema
+  { id: 'isabella', label: 'Isabella IA', icon: Brain },
+  { id: 'cells', label: 'KnowledgeCells', icon: Boxes },
+  { id: 'bridges', label: 'Puentes', icon: Link2 },
   { id: 'bookpi', label: 'BookPI', icon: FileCheck },
   { id: 'memberships', label: 'Memberships', icon: Crown },
-  { id: 'divider2', label: '', icon: null },
+  { id: 'divider3', label: '', icon: null },
+  // DevOps
   { id: 'devhub', label: 'DevHub', icon: Code },
-  { id: 'pipelines', label: 'CI/CD', icon: GitBranch },
   { id: 'security', label: 'Seguridad', icon: Shield },
-  { id: 'observability', label: 'Observabilidad', icon: Activity },
-  { id: 'database', label: 'Base de Datos', icon: Database },
+  { id: 'metrics', label: 'Métricas', icon: Activity },
+  { id: 'layers', label: 'Arquitectura', icon: Layers },
+  { id: 'federation', label: 'Federación', icon: Globe },
 ];
 
 export function Sidebar({ isOpen, onClose, activeSection, onSectionChange }: SidebarProps) {

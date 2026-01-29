@@ -27,6 +27,13 @@ import { ChannelsSection } from '@/components/dashboard/ChannelsSection';
 import { GroupsSection } from '@/components/dashboard/GroupsSection';
 import { MetricsCharts } from '@/components/dashboard/MetricsCharts';
 import { GallerySection } from '@/components/dashboard/GallerySection';
+import { SocialFeedSection } from '@/components/dashboard/SocialFeedSection';
+import { MessagingSection } from '@/components/dashboard/MessagingSection';
+import { ConcertsSection } from '@/components/dashboard/ConcertsSection';
+import { UniversitySection } from '@/components/dashboard/UniversitySection';
+import { LotterySection } from '@/components/dashboard/LotterySection';
+import { KnowledgeBridgesSection } from '@/components/dashboard/KnowledgeBridgesSection';
+import { SecuritySection } from '@/components/dashboard/SecuritySection';
 import { knowledgeCells, systemModules, federationDomains, dashboardStats } from '@/data/mockData';
 
 interface DashboardContentProps {
@@ -37,17 +44,24 @@ export function DashboardContent({ activeSection }: DashboardContentProps) {
   const renderContent = () => {
     switch (activeSection) {
       case 'dashboard': return <DashboardOverview />;
+      case 'feed': return <SocialFeedSection />;
+      case 'messages': return <MessagingSection />;
       case 'cells': return <CellsSection />;
       case 'layers': return <LayersSection />;
       case 'federation': return <FederationSection />;
       case 'modules': return <ModulesSection />;
       case 'isabella': return <IsabellaSection />;
       case 'dreamspaces': return <DreamSpacesSection />;
+      case 'concerts': return <ConcertsSection />;
       case 'kaos': return <KaosAudioSection />;
       case 'trueque': return <TruequeSection />;
+      case 'lottery': return <LotterySection />;
+      case 'university': return <UniversitySection />;
       case 'bookpi': return <BookPISection />;
       case 'memberships': return <MembershipsSection />;
+      case 'bridges': return <KnowledgeBridgesSection />;
       case 'devhub': return <DevHubSection />;
+      case 'security': return <SecuritySection />;
       case 'media': return <MediaFeed />;
       case 'channels': return <ChannelsSection />;
       case 'groups': return <GroupsSection />;
